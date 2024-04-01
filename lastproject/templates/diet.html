@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+식단<br/>
+{% include 'header.html' %}
+<table border="1">
+        <tr>
+            <th>회원명</th>
+            <th>메뉴</th>
+            <th>날짜</th>
+        </tr>
+        {% for d in list %}
+        <tr>
+            <td>{{ d['e_id'] }}</td>
+            <td>{{ d['m_id'] }}</td>
+            <td>{{ d['ymd'] }}</td>
+        </tr>
+        {% endfor %}
+
+</table>
+</body>
+</html>

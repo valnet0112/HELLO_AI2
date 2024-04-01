@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+메뉴<br/>
+{% include 'header.html' %}
+<table border="1">
+        <tr>
+            <th>메뉴번호</th>
+            <th>메뉴명</th>
+            <th>사용여부</th>
+        </tr>
+        {% for e in list %}
+        <tr>
+            <td>{{ e['m_id'] }}</td>
+            <td>{{ e['m_name'] }}</td>
+            <td>{{ e['use_yn'] }}</td>
+        </tr>
+        {% endfor %}
+
+
+</table>
+</body>
+</html>

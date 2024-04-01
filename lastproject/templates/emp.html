@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+회원정보<br/>
+{% include 'header.html' %}
+ <table border="1">
+        <tr>
+            <th>회원번호</th>
+            <th>이름</th>
+            <th>성별</th>
+            <th>주소</th>
+        </tr>
+        {% for e in emps %}
+        <tr>
+            <td>{{ e['e_id'] }}</td>
+            <td>{{ e['e_name'] }}</td>
+            <td>{{ e['gen'] }}</td>
+            <td>{{ e['addr'] }}</td>
+        </tr>
+        {% endfor %}
+</table>
+</body>
+</html>
